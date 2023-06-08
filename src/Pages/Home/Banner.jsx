@@ -30,8 +30,10 @@ const Banner = () => {
                     <div class="relative">
                         <img src={banner1} alt="Banner Image" class="object-cover max-h-screen  w-full" />
                             <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <h1 class="text-white text-4xl font-bold">Welcome to My Website!</h1>
+                            <div class="absolute inset-0 flex gap-2  flex-col items-center justify-center">
+                                <h1 class="text-white md:text-xl font-bold te">WELCOME TO GREENSIDE</h1>
+                                <h1 className='md:text-5xl text-2xl  md:w-1/2 text-white'>The favourite colour of golfers is green.</h1>
+                                <button className='btn bg-[#3AA62B] border-0 text-white px-5 mt-3 py-3'>Book now</button>
                             </div>
                     </div>
 
@@ -40,7 +42,7 @@ const Banner = () => {
                 </div>
                 <div>
                 <div class="relative">
-                        <img src={banner2} alt="Banner Image" class="object-cover w-full" />
+                        <img src={banner2} alt="Banner Image" class="object-cover max-h-screen  w-full" />
                             <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
                             <div class="absolute inset-0 flex gap-2  flex-col items-center justify-center">
                                 <h1 class="text-white md:text-xl font-bold te">WELCOME TO GREENSIDE</h1>
@@ -51,10 +53,12 @@ const Banner = () => {
                 </div>
                 <div>
                 <div class="relative">
-                        <img src={banner3} alt="Banner Image" class="object-cover   w-full" />
+                        <img src={banner3} alt="Banner Image" class="object-cover max-h-screen   w-full" />
                             <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <h1 class="text-white text-4xl font-bold">Welcome to My Website!</h1>
+                            <div class="absolute inset-0 flex gap-2  flex-col items-center justify-center">
+                                <h1 class="text-white md:text-xl font-bold te">WELCOME TO GREENSIDE</h1>
+                                <h1 className='md:text-5xl text-2xl  md:w-1/2 text-white'>The favourite colour of golfers is green.</h1>
+                                <button className='btn bg-[#3AA62B] border-0 text-white px-5 mt-3 py-3'>Book now</button>
                             </div>
                     </div>
                 </div>
