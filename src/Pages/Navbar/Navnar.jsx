@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logos from '../../assets/logox1.png'
 import logo from '../../assets/footer-logo-1.png'
 import { CgProfile } from 'react-icons/cg';
+import { AuthContext } from '../../Provider/AuthProvider';
 const Navnar = () => {
+    const { user, logOut } = useContext(AuthContext)
+    const handelLogOut = () => {
+        logOut()
+            .then(() => { })
+        //  .catch(err =>console.log(err))
+    }
     const navOption = <>
         <li className='text-white'><Link to='/'>Home</Link></li>
         <li className='text-white'><Link to='/'>Instructors</Link></li>
@@ -30,7 +37,19 @@ const Navnar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
+
+                {
+            user ? (
+                <button onClick={handelLogOut} className="btn btn-info">
                     <CgProfile className='text-white' size={30}/>
+                </button>
+            ) : (
+                <li>
+                    <Link to="/login">Login</Link>
+                </li>
+            )
+        }
+                   
                 </div>
             </div>
         </div>
