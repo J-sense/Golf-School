@@ -6,6 +6,7 @@ import { CgProfile } from 'react-icons/cg';
 import { AuthContext } from '../../Provider/AuthProvider';
 const Navnar = () => {
     const { user, logOut } = useContext(AuthContext)
+    console.log(user)
     const handelLogOut = () => {
         logOut()
             .then(() => { })
@@ -37,6 +38,18 @@ const Navnar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
+                {user &&
+                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img
+                                    src={user.photoURL}
+                                    alt=""
+                                    title={user.displayName}
+                                    className="avatar-img"
+                                />
+                            </div>
+                        </label>
+                    }
 
                 {
             user ? (

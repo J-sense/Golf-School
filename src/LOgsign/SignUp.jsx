@@ -6,7 +6,7 @@ import Swal from 'sweetalert2'
 
 
 const SignUp = () => {
-    const { createUser } = useContext(AuthContext)
+    const { user,createUser,updateUSerProfile } = useContext(AuthContext)
     const [error, setError] = useState('')
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
@@ -20,14 +20,34 @@ const SignUp = () => {
             .then(resul => {
                 const loggedUser = resul.user;
                 console.log(loggedUser)
+                const saveUSer = {name:data.name , email:data.email}
+                updateUSerProfile(data.name,data.photourl)
+                .then(()=>{
+                    console.log('profile updated')
+                  fetch('http://localhost:5000/users',{
+                    method :"POST",
+                    headers : {
+                        'content-type' : 'application/json'
+                    },
+                    body: JSON.stringify(saveUSer)
+                    
+                  })
+                  .then(res => res.json)
+                  .then(data =>{
+                    if (data.insertedId){
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Sign Up successfully',
+                            showConfirmButton: false,
+                            timer: 1500
+                          });
+                    }
+                  })
+
+                })
                 // navigate('/')
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'Sign Up successfully',
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
+            
             })
     }
     return (
