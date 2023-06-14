@@ -2,13 +2,15 @@ import React, { useContext, useState } from 'react';
 import { useForm } from "react-hook-form";
 import { AuthContext } from '../Provider/AuthProvider';
 import Swal from 'sweetalert2'
+import useAxiosSecure from '../hook/useAxiosSecure';
 // const Swal = require('sweetalert2')
 
 
 const SignUp = () => {
+    const [axiosSecure] = useAxiosSecure();
     const { user,createUser,updateUSerProfile } = useContext(AuthContext)
     const [error, setError] = useState('')
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data);
         if (data.password !== data.confirm) {
@@ -24,17 +26,10 @@ const SignUp = () => {
                 updateUSerProfile(data.name,data.photourl)
                 .then(()=>{
                     console.log('profile updated')
-                  fetch('http://localhost:5000/users',{
-                    method :"POST",
-                    headers : {
-                        'content-type' : 'application/json'
-                    },
-                    body: JSON.stringify(saveUSer)
-                    
-                  })
-                  .then(res => res.json)
-                  .then(data =>{
-                    if (data.insertedId){
+                 axiosSecure.post('/users',saveUSer)
+                  .then(res =>{
+                    if (res.data.insertedId){
+                        reset()
                         Swal.fire({
                             position: 'top-end',
                             icon: 'success',

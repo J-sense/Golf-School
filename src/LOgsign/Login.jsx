@@ -2,8 +2,9 @@ import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 // import login from '../../assets/picture/img-11.jpg'
 // import { Authcontext } from '../Provider/authProvider';
-import { FaBeer,FaGoogle } from 'react-icons/fa';
+import { FaBeer,FaGoogle, FaSalesforce } from 'react-icons/fa';
 import { AuthContext } from '../Provider/AuthProvider';
+import { saveUser } from '../api/auth';
 const Login = () => {
     const { user, signIn,GoogleSignIn } = useContext(AuthContext)
     const navigate = useNavigate();
@@ -20,6 +21,7 @@ const Login = () => {
                 const signed = reult.user;
                 console.log(signed);
                 UpdateProfile(user,name,photo)
+                saveUser(reult.user)
                 navigate(from, {replace : true})
                 
             })
@@ -48,6 +50,7 @@ const Login = () => {
         GoogleSignIn()
         .then(result =>{
             const loggeduser = result.user;
+            // saveUser(result.user)
             navigate(from,{replace: true})
         })
         .catch(err =>{

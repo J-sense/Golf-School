@@ -16,6 +16,7 @@ const Navnar = () => {
         <li className='text-white'><Link to='/'>Home</Link></li>
         <li className='text-white'><Link to='/'>Instructors</Link></li>
         <li className='text-white'><Link to='/'>Classes</Link></li>
+        <li className='text-white'><Link to='/dashboard'>Dashboard</Link></li>
   
     </>
     return (

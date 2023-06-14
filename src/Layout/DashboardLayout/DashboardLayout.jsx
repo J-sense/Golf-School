@@ -3,13 +3,16 @@ import { useState } from 'react';
 import { FaHome,FaUsers, FaBookReader, FaChalkboardTeacher, FaTv, FaWindowClose, FaClone, FaClipboardCheck } from "react-icons/fa";
 // import { HiAnnotation } from "react-icons/hi";
 import { NavLink, Outlet } from 'react-router-dom';
+import useAdmin from '../../hook/useAdmin';
+import useInstructor from '../../hook/useInstructor';
 
 const DashboardLayout = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     // console.log(cart);
-    const isAdmin = true;
-    const user = false;
-    const isInstructor = false;
+    const [isAdmin] = useAdmin()
+    // const user = false;
+    const [isInstructor] =useInstructor()
+    console.log(isInstructor)
 
     const handleToggleSidebar = () => {
         setSidebarOpen(!sidebarOpen);
@@ -46,7 +49,7 @@ const DashboardLayout = () => {
                         </li>
 
                         {
-                            isAdmin &&
+                            isAdmin ? (
                             <>
                                 <li onClick={handleCloseDashboard}>
                                     {/* TODO */}
@@ -74,10 +77,11 @@ const DashboardLayout = () => {
                                     </NavLink>
                                 </li>
                             </>
-                        }
+                            )
+                        :
 
-                        {
-                            isInstructor &&
+                        
+                            isInstructor ? (
                             <>
                                 <li onClick={handleCloseDashboard}>
                                     {/* TODO */}
@@ -89,7 +93,7 @@ const DashboardLayout = () => {
                                     </NavLink>
                                 </li>
                                 <li onClick={handleCloseDashboard}>
-                                    <NavLink to='/dashboard/'>
+                                    <NavLink to='/dashboard/addclass'>
                                         <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group ">
                                             <FaBookReader className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></FaBookReader>
                                             <span className="flex-1 ml-3 whitespace-nowrap">Add a Class</span>
@@ -97,7 +101,7 @@ const DashboardLayout = () => {
                                     </NavLink>
                                 </li>
                                 <li onClick={handleCloseDashboard}>
-                                    <NavLink to='/dashboard/'>
+                                    <NavLink to='/dashboard/myclasses'>
                                         <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                             <FaClone className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"></FaClone>
                                             <span className="flex-1 ml-3 whitespace-nowrap">My Classes</span>
@@ -105,10 +109,11 @@ const DashboardLayout = () => {
                                     </NavLink>
                                 </li>
                             </>
-                        }
-
-                        {
-                            user &&
+                            )
+                        
+                                :
+                        
+                            (
                             <>
                                 <li onClick={handleCloseDashboard}>
                                     {/* TODO */}
@@ -136,7 +141,8 @@ const DashboardLayout = () => {
                                     </NavLink>
                                 </li>
                             </>
-                        }
+                            )
+                            }
 
                     </ul>
                     <ul className="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
