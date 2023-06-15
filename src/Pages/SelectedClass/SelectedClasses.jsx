@@ -114,7 +114,7 @@ const SelectedClasses = () => {
                                         {/* for enrol */}
                                         <Link to={`/dashboard/payment/${sclass.selectClassId}`}>
                                             <button
-                                                className=" btn btn-outline btn-success w-full"
+                                                className=" btn btn-outline btn-info w-full"
                                             >
                                                 Payment
                                             </button>
