@@ -2,11 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 
 const PopularInstructors = () => {
 
-    // useEffect(() => {
-    //     AOS.init({
-    //         duration: 1200,
-    //     });
-    // }, []);
 
     const { data: PopularInstructors = [], refetch } = useQuery({
         queryKey: ["popularInstructors"],
