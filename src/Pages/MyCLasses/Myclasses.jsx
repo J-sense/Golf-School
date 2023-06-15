@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Myclasses = () => {
 
@@ -81,7 +82,7 @@ const Myclasses = () => {
 
                                     <td className="px-6 py-4 ">
                                         {/* for toy price */}
-                                        <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">{sclass?.availableSeats}</button>
+                                        <button className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">{sclass?.availableSeats}</button>
                                     </td>
 
                                     <td className="px-6 py-4 ">

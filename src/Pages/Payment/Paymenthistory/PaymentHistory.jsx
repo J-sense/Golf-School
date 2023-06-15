@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import useAxiosSecure from "../../../hook/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
+import { Helmet } from "react-helmet";
 
 const PaymentHistory = () => {
 
@@ -74,27 +75,27 @@ const PaymentHistory = () => {
 
                                     <td className="px-6 py-4 ">
                                         {/* for toy price */}
-                                        <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">{sclass?.email}</button>
+                                        <button className="inline-block px-4 py-2 font-medium rounded-full text-white bg-gradient-to-r from-purple-400 to-blue-500 shadow-md hover:shadow-lg transition duration-300 ease-in-out">{sclass?.email}</button>
                                     </td>
 
                                     <td className="px-6 py-4 ">
                                         {/* for toy price */}
-                                        <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">{sclass?.enrolledClassName}</button>
+                                        <button className="inline-block px-4 py-2 font-medium rounded-full text-white bg-gradient-to-r from-purple-400 to-blue-500 shadow-md hover:shadow-lg transition duration-300 ease-in-out">{sclass?.enrolledClassName}</button>
                                     </td>
 
                                     <td className="px-6 py-4 ">
                                         {/* for toy price */}
-                                        <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">{sclass?.date}</button>
+                                        <button className="inline-block px-4 py-2 font-medium rounded-full text-white bg-gradient-to-r from-purple-400 to-blue-500 shadow-md hover:shadow-lg transition duration-300 ease-in-out">{sclass?.date}</button>
                                     </td>
 
                                     <td className="px-6 py-4 ">
                                         {/* for toy price */}
-                                        <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">${sclass?.price}</button>
+                                        <button className="inline-block px-4 py-2 font-medium rounded-full text-white bg-gradient-to-r from-purple-400 to-blue-500 shadow-md hover:shadow-lg transition duration-300 ease-in-out">${sclass?.price}</button>
                                     </td>
 
                                     <td className="px-6 py-4 ">
                                         {/* for enrol */}
-                                        <button className="block rounded bg-gradient-to-r from-emerald-300 to-emerald-100 w-full px-3 py-3 text-sm font-mono text-black shadow">
+                                        <button className="inline-block px-4 py-2 font-medium rounded-full text-white bg-gradient-to-r from-purple-400 to-blue-500 shadow-md hover:shadow-lg transition duration-300 ease-in-out">
                                             Successful
                                         </button>
                                     </td>

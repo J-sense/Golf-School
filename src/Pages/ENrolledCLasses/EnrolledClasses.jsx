@@ -65,23 +65,23 @@ const EnrolledClasses = () => {
                                         <img className="w-10 h-10 rounded-full" src={sclass?.image} alt="Jese image" />
                                         <div className="pl-3">
                                             <div className="text-base font-semibold">{sclass?.className}</div>
-                                            <div className="font-normal text-gray-500">AISportsHub</div>
+                                            <div className="font-normal text-gray-500">Yoku</div>
                                         </div>
                                     </th>
 
                                     <td className="px-6 py-4 ">
                                         {/* for toy price */}
-                                        <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">{sclass?.studentEmail}</button>
+                                        <button className="inline-block px-4 py-2 font-medium rounded-full text-white bg-gradient-to-r from-purple-400 to-blue-500 shadow-md hover:shadow-lg transition duration-300 ease-in-out">{sclass?.studentEmail}</button>
                                     </td>
 
                                     <td className="px-6 py-4 ">
                                         {/* for toy price */}
-                                        <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">{sclass?.instructorName}</button>
+                                        <button className="inline-block px-4 py-2 font-medium rounded-full text-white bg-gradient-to-r from-purple-400 to-blue-500 shadow-md hover:shadow-lg transition duration-300 ease-in-out">{sclass?.instructorName}</button>
                                     </td>
 
                                     <td className="px-6 py-4 ">
                                         {/* for toy price */}
-                                        <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">${sclass?.price}</button>
+                                        <button className="inline-block px-4 py-2 font-medium rounded-full text-white bg-gradient-to-r from-purple-400 to-blue-500 shadow-md hover:shadow-lg transition duration-300 ease-in-out">${sclass?.price}</button>
                                     </td>
 
                                     <td className="px-6 py-4 ">

@@ -4,6 +4,7 @@ import useAxiosSecure from "../../hook/useAxiosSecure";
 import useSelectedClasses from "../../hook/useSelectedClasses";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const SelectedClasses = () => {
 
@@ -42,9 +43,9 @@ const SelectedClasses = () => {
 
         <div>
 
-            {/* <Helmet>
-                <title>AISportsHub | Selected Classes</title>
-            </Helmet> */}
+            <Helmet>
+                <title>Yoki | Selected Classes</title>
+            </Helmet>
 
             <h1 className="text-xl mt-5 mb-7 lg:mb-9 font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">My Seleted <span className="text-teal-500">Classe&#39;s</span></h1>
 
@@ -85,7 +86,7 @@ const SelectedClasses = () => {
                                     <td className="w-4 p-4 text-center">
                                         {index + 1}
                                     </td>
-                                    <th scope="row" className="flex mt-2 -ml-4 mr-5 items-center  px-8 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                    <th scope="row" className="flex mt-2  items-center  px-8 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                         {/* for user image and name and email */}
                                         <img className="w-10 h-10 rounded-full" src={sclass?.image} alt="Jese image" />
                                         <div className="pl-3">
@@ -96,17 +97,17 @@ const SelectedClasses = () => {
 
                                     <td className="px-6 py-4 ">
                                         {/* for toy price */}
-                                        <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">{sclass?.studentEmail}</button>
+                                        <button className="inline-block px-4 py-2 font-medium rounded-full text-white bg-gradient-to-r from-purple-400 to-blue-500 shadow-md hover:shadow-lg transition duration-300 ease-in-out">{sclass?.studentEmail}</button>
                                     </td>
 
                                     <td className="px-6 py-4 ">
                                         {/* for toy price */}
-                                        <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">{sclass?.instructorName}</button>
+                                        <button className="inline-block px-4 py-2 font-medium rounded-full text-white bg-gradient-to-r from-purple-400 to-blue-500 shadow-md hover:shadow-lg transition duration-300 ease-in-out">{sclass?.instructorName}</button>
                                     </td>
 
                                     <td className="px-6 py-4 ">
                                         {/* for toy price */}
-                                        <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">${sclass?.price}</button>
+                                        <button className="inline-block px-4 py-2 font-medium rounded-full text-white bg-gradient-to-r from-purple-400 to-blue-500 shadow-md hover:shadow-lg transition duration-300 ease-in-out">${sclass?.price}</button>
                                     </td>
 
                                     <td className="px-6 py-4 ">
