@@ -11,6 +11,12 @@ import PrivateRoute from "./PrivateRote.jsx/PrivateRoute";
 import Addclass from "../Pages/Dashboard/Addclass/Addclass";
 import Myclasses from "../Pages/MyCLasses/Myclasses";
 import ManageClasses from "../Pages/ManageUSers/ManageClasses";
+import Classes from "../Pages/CLasses/Classes";
+import SelectedClasses from "../Pages/SelectedClass/SelectedClasses";
+import Payment from "../Pages/Payment/Payment";
+import PaymentHistory from "../Pages/Payment/Paymenthistory/PaymentHistory";
+import EnrolledClasses from "../Pages/ENrolledCLasses/EnrolledClasses";
+import Instructors from "../Pages/Instractor/Instructors";
     
 
 
@@ -30,6 +36,14 @@ import ManageClasses from "../Pages/ManageUSers/ManageClasses";
         {
             path :'/login',
             element:<Login></Login>
+        },
+        {
+          path :'classes',
+          element : <Classes></Classes>
+        },
+        {
+          path :'/instractors',
+          element : <Instructors></Instructors>
         }
       ]
     },
@@ -52,7 +66,25 @@ import ManageClasses from "../Pages/ManageUSers/ManageClasses";
         {
           path :'manageClasses',
           element : <ManageClasses>s</ManageClasses>
-        }
+        },
+        {
+          path :'selectedClass',
+          element : <SelectedClasses></SelectedClasses>
+        },
+        {
+          path :'payment/:id',
+          element : <Payment></Payment>
+        },
+        {
+          path :'paymenthistory',
+          element : <PaymentHistory></PaymentHistory>
+        },
+       
+        {
+          path :'enrolled',
+          element : <EnrolledClasses></EnrolledClasses>
+        },
+       
       ]
     }
   ]);

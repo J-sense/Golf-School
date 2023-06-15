@@ -32,7 +32,7 @@ const Extra = () => {
 
                 <div className="card bg-base-100 shadow-xl max-w-sm mx-auto overflow-hidden">
                     <div className="relative">
-                        <img src={img2} alt="Card Image" className="rounded-none w-full hover:scale-105 transition-transform duration-300" />
+                        <img src={img1} alt="Card Image" className="rounded-none w-full hover:scale-105 transition-transform duration-300" />
                         <div className="absolute bottom-0 left-0 right-0 p-4 bg-opacity-75 bg-gray-900 text-white opacity-0 transition-opacity duration-300">
                             <p className="text-lg font-semibold">Additional Text</p>
                         </div>
@@ -48,7 +48,7 @@ const Extra = () => {
 
                 <div className="card bg-base-100 shadow-xl max-w-sm mx-auto overflow-hidden">
                     <div className="relative">
-                        <img src={img2} alt="Card Image" className="w-full hover:scale-105 transition-transform duration-300" />
+                        <img src={img3} alt="Card Image" className="w-full hover:scale-105 transition-transform duration-300" />
                         <div className="absolute bottom-0 left-0 right-0 p-4 bg-opacity-75 bg-gray-900 text-white opacity-0 transition-opacity duration-300">
                             <p className="text-lg font-semibold">Additional Text</p>
                         </div>
