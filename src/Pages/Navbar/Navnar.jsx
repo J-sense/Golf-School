@@ -16,7 +16,11 @@ const Navnar = () => {
         <li className='text-white'><Link to='/'>Home</Link></li>
         <li className='text-white'><Link to='/instractors'>Instructors</Link></li>
         <li className='text-white'><Link to='/classes'>Classes</Link></li>
-        <li className='text-white'><Link to='/dashboard'>Dashboard</Link></li>
+        {
+             user &&
+            <li className='text-white'><Link to='/dashboard'>Dashboard</Link></li>
+
+        }
   
     </>
     return (
