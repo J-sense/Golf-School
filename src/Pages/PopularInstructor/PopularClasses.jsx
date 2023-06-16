@@ -23,7 +23,7 @@ const PopularClasses = () => {
     return (
         <div className="bg-[#DBE8E7]">
 
-        <div data-aos='zoom-in' className=' mt-6 lg:mt-7 mb-12 max-w-screen-xl mx-auto gap-5 '>
+        <div  className=' mt-6 lg:mt-7 mb-12 max-w-screen-xl mx-auto gap-5 '>
 
             <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">review our    <br /> Popular <span className="text-teal-500">Top Classe&#39;s</span></h1>
 
