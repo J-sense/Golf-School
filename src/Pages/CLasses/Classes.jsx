@@ -6,6 +6,7 @@ import useInstructor from "../../hook/useInstructor";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useQuery } from "@tanstack/react-query";
+import { Helmet } from "react-helmet";
 
 const Classes = () => {
 
@@ -76,9 +77,9 @@ const Classes = () => {
     return (
         <div className="mt-14 lg:mx-12">
 
-            {/* <Helmet>
-                <title>AISportsHub | Classes Page</title>
-            </Helmet> */}
+            <Helmet>
+                <title>Yoku | Classes Page</title>
+            </Helmet>
 
             <div className="grid grid-cols-1 mx-4  md:grid-cols-2 lg:grid-cols-3 md:mx-6 lg:mx-8 gap-10">
                 {approvedClasses.map((Class, index) => (
