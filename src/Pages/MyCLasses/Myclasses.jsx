@@ -81,17 +81,17 @@ const Myclasses = () => {
                                     </th>
 
                                     <td className="px-6 py-4 ">
-                                        
+
                                         <button className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">{sclass?.availableSeats}</button>
                                     </td>
 
                                     <td className="px-6 py-4 ">
-                                        
+
                                         <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">${sclass?.price}</button>
                                     </td>
 
                                     <td className="px-6 py-4 ">
-                                        
+
                                         {sclass.status === 'pending' && (
                                             <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">
                                                 {sclass.status}
