@@ -4,7 +4,7 @@ export const saveUser = user =>{
     const curretUser = {
         email : user.email
     }
-    fetch(`http://localhost:5000/${user?.email}`,{
+    fetch(`https://b712-summer-camp-server-side-j-sense.vercel.app/${user?.email}`,{
         method: 'PUT',
         headers:{
             'content-type' :'application/json'

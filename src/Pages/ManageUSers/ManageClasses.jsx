@@ -104,23 +104,23 @@ const ManageClasses = () => {
 
                                     <td className="px-6 py-4 ">
                                   
-                                        <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">{sclass?.instructorName}</button>
+                                        <button className="inline-block px-4 py-2 font-medium rounded-full text-white bg-gradient-to-r from-purple-400 to-blue-500 shadow-md hover:shadow-lg transition duration-300 ease-in-out">{sclass?.instructorName}</button>
 
                                     </td>
 
                                     <td className="px-6 py-4 ">
                                       
-                                        <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">{sclass?.instructorEmail}</button>
+                                        <button className="inline-block px-4 py-2 font-medium rounded-full text-white bg-gradient-to-r from-purple-400 to-blue-500 shadow-md hover:shadow-lg transition duration-300 ease-in-out">{sclass?.instructorEmail}</button>
                                     </td>
 
                                     <td className="px-6 py-4 ">
                                      
-                                        <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">{sclass?.availableSeats}</button>
+                                        <button className="inline-block px-4 py-2 font-medium rounded-full text-white bg-gradient-to-r from-purple-400 to-blue-500 shadow-md hover:shadow-lg transition duration-300 ease-in-out">{sclass?.availableSeats}</button>
                                     </td>
 
                                     <td className="px-6 py-4 ">
                                       
-                                        <button className="block rounded bg-gradient-to-r from-teal-100 to-amber-100 w-full px-3 py-3 text-sm font-mono text-black shadow">${sclass?.price}</button>
+                                        <button className="inline-block px-4 py-2 font-medium rounded-full text-white bg-gradient-to-r from-purple-400 to-blue-500 shadow-md hover:shadow-lg transition duration-300 ease-in-out">${sclass?.price}</button>
                                     </td>
 
                                     <td className="px-6 py-4 ">
@@ -146,7 +146,7 @@ const ManageClasses = () => {
                                         {/* for approve */}
                                         <button
                                             onClick={() => handleApprove(sclass._id)}
-                                            className=" btn btn-accent w-full"
+                                            className=" btn btn-info w-full"
                                             disabled={sclass?.status === 'approved' || sclass?.status === 'denied'}
                                         >
                                             Approve
@@ -167,7 +167,7 @@ const ManageClasses = () => {
                                     <td className="px-6 py-4">
                                         <Link to={`/dashboard/feedback/${sclass._id}`}>
                                             <button
-                                                className=" btn btn-outline btn-success w-full">
+                                                className=" btn btn-outline btn-info w-full">
                                                 Feedback
                                             </button>
                                         </Link>
