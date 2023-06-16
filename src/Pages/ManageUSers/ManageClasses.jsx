@@ -9,7 +9,7 @@ const ManageClasses = () => {
     const [axiosSecure] = useAxiosSecure();
 
     const handleApprove = async (id) => {
-        // setButtonDisabled(true); // Disable buttons
+        
         const res = await axiosSecure.patch(`/addClasses/approve/${id}`);
         if (res.data.modifiedCount) {
             refetch();
