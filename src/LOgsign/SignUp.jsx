@@ -7,6 +7,15 @@ import useAxiosSecure from '../hook/useAxiosSecure';
 
 
 const SignUp = () => {
+    const [showPassword, setShowPassword] = useState(false);
+    const [password, setPassword] = useState('');
+    const handleTogglePassword = () => {
+        setShowPassword(!showPassword);
+      };
+    
+      const handleChange = (event) => {
+        setPassword(event.target.value);
+      };
     const [axiosSecure] = useAxiosSecure();
     const { user,createUser,updateUSerProfile } = useContext(AuthContext)
     const [error, setError] = useState('')
@@ -70,10 +79,13 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" {...register("password", { required: true, minLength: 6, pattern: /^[A-Z]+$/i })} placeholder="password" className="input input-bordered" />
+                                <input type={showPassword ? 'text' : 'password'}  onChange={handleChange} {...register("password", { required: true, minLength: 6, pattern: /^[A-Z]+$/i })} placeholder="password" className="input input-bordered" />
                                 {errors.password && <span className='text-red-500'>password at least six charecter</span>}
                                 {errors.password && <span className='text-red-500'>Your password must contain at least one capital letter and a special charecter.</span>}
+                                <div className='w-10'>
+                                <input type="checkbox"  onClick={handleTogglePassword}  name="" id="" />
 
+                                </div>
                             </div>
                             <div className="form-control">
                                 <label className="label">
